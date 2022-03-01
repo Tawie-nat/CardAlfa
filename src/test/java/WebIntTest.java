@@ -90,7 +90,7 @@ public class WebIntTest {
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button")).click();
 
-        String actual = driver.findElement(By.className("input__tel")).getText().trim();
+        String actual = driver.findElement(By.cssSelector(".input_invalid[data-test-id=phone] .input__sub")).getText().trim();
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.".trim();
         assertEquals(expected, actual);
     }
@@ -104,7 +104,7 @@ public class WebIntTest {
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.className("button")).click();
 
-        String actual = driver.findElement(By.className("input__tel")).getText().trim();
+        String actual = driver.findElement(By.cssSelector(".input_invalid[data-test-id=phone] .input__sub")).getText().trim();
         String expected = "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.".trim();
         assertEquals(expected, actual);
     }
